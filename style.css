@@ -1,0 +1,302 @@
+html {
+    min-height: 100%;
+    background: linear-gradient(
+        135deg,
+        #06070d 0%,
+        #0d1326 50%,
+        #171d35 100%
+    );
+    background-attachment: fixed;
+}
+
+
+body
+{
+     min-height: 100%;
+    margin: 0;
+    max-width: 1500px;
+    font-family: "Inter", sans-serif;
+				
+}
+	/*                                                                      NAVBAR CODE                                              */
+			
+		.navbar{
+    position:fixed;
+    top:5px;
+    left:50%;
+    transform:translateX(-50%);
+    width:90%;
+    height:72px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 30px;
+    border-radius:22px;
+    background:rgba(10,12,22,.70);
+    backdrop-filter:blur(22px);
+    -webkit-backdrop-filter:blur(22px);
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.45),
+        inset 0 1px rgba(255,255,255,.05),
+        0 0 35px rgba(59,130,246,.08),
+        0 0 30px rgba(168,85,247,.08);
+    z-index:999;
+}
+
+/* LOGO */
+
+.logo{
+   color:#fff;
+    font-family:"Sora", sans-serif;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:24px;
+    font-weight:700;
+}
+
+.logo i{
+    color:#8b5cf6;
+    font-size:28px;
+}
+
+/* SEARCH */
+.search{
+    width:520px;
+    height:48px;
+    display:flex;
+    align-items:center;
+    padding:0 18px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:16px;
+    transition:.35s;
+}
+
+.search:hover{
+    background:rgba(255,255,255,.08);
+    border-color:#8b5cf6;
+    box-shadow:0 0 18px rgba(139,92,246,.25);
+}
+
+.search i{
+    color:#9ca3af;
+    font-size:18px;
+}
+
+.search input{
+    flex:1;
+    margin-left:15px;
+    border:none;
+    outline:none;
+    background:transparent;
+    color:white;
+    font-size:15px;
+}
+
+.search input::placeholder{
+    color:#9ca3af;
+}
+
+/* RIGHT SIDE */
+
+.right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.right i{
+
+    color:#d1d5db;
+    font-size:20px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.right i:hover{
+    color:white;
+    transform:translateY(-2px);
+}
+
+/* PREMIUM BUTTON */
+
+.premium{
+    padding:10px 22px;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(135deg,#8b5cf6,#3b82f6);
+    color:white;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.premium:hover{
+    transform:translateY(-2px);
+    box-shadow:0 0 18px rgba(139,92,246,.4);
+}
+
+/* PROFILE */
+
+.profile{
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#8b5cf6,#3b82f6);
+    color:white;
+    font-weight:700;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.profile:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 18px rgba(59,130,246,.45);
+}	
+   
+/*                       ARTIST SECTION          */
+  
+		  
+		  .artistcontainer
+		  {
+                  margin-left:290px;
+                  margin-top:35px;
+                  display:flex;
+                   gap:26px;
+                    align-items:center;
+}
+
+
+		.artist {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    position: relative;
+    overflow: visible;
+    transition: transform .3s ease;
+}
+
+.artist:hover {
+    transform: scale(1.08);
+}
+
+.artist img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+.artist::before {
+    content: "";
+    position: absolute;
+    inset: -5px;
+    border-radius: 50%;
+    padding: 4px;
+    background: conic-gradient(
+        from 0deg,
+        #0a1440,
+        #1e3a8a 20%,
+        #2563eb 40%,
+        #38bdf8 55%,
+        #e0f7ff 62%,
+        #38bdf8 70%,
+        #2563eb 85%,
+        #0a1440 100%
+    );
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    animation: ringSpin 5s linear infinite;
+    filter:
+        drop-shadow(0 0 6px rgba(56, 189, 248, 0.9))
+        drop-shadow(0 0 16px rgba(37, 99, 235, 0.6));
+}
+
+     /*                                 ALBUM                                             */
+								
+		
+                   .albums 
+				   {
+				    margin-top:230px;
+		               margin-left:-10px;
+				   width: 160px;
+                           height: 150px;
+                           position: relative;
+                          overflow: hidden;
+                          border-radius: 14px;
+                          padding: 23px;
+                          box-shadow: 0 25px 45px rgba(0,0,0,.45);
+                          transition: .35s;
+                        }
+                       .albums:hover
+			     {
+                        transform: translateY(-8px);
+                        box-shadow: 0 35px 60px rgba(0,0,0,.55);
+                       }
+                       .album-title
+			     {
+                         margin-top:30px;
+                         margin-left:-6px;
+                         font-family:'Poppins',sans-serif;
+                          font-size:34px;
+                         font-weight:800;
+                          line-height:.92;
+                         letter-spacing:-2px;
+                         color:white;
+                         text-shadow:
+                         0 6px 20px rgba(0,0,0,.22);
+                      }
+			   .album-subtitle
+			   {
+                        color:rgba(255,255,255,.82);
+                         font-size:13px;
+                         font-weight:600;
+                         letter-spacing:.5px;
+                        margin-top:-20px;
+                      }
+			   .album-logo
+			   {
+                         width:42px;
+                        opacity:.9;
+			    }
+/* MUSIC VIDEO SECTION */
+
+  .videoalbums
+                    {
+                        margin-top:290px;
+                         margin-left:-10px;
+                    
+    width:290px;
+    height:180px;
+    position:relative;
+    border-radius:20px;
+    box-shadow: 0 25px 45px rgba(0,0,0,.45);
+    transition:.35s;
+	
+}
+
+.videoalbums img{
+border-radius:10px;
+}
+
+@media (max-width: 1500px) {
+    body {
+        transform: scale(calc(100vw / 1500));
+        transform-origin: top left;
+        width: 1500px;
+    }
+    html {
+        overflow-x: hidden;
+    }
+}
